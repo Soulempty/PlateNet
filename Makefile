@@ -180,7 +180,7 @@ ifneq ($(CPU_ONLY), 1)
 	LIBRARIES := cudart cublas curand
 endif
 
-LIBRARIES += glog gflags protobuf boost_system boost_filesystem boost_regex m hdf5_hl hdf5 hdf5_serial_hl hdf5_serial opencv_core opencv_highgui opencv_imgproc  
+LIBRARIES += glog gflags protobuf boost_system boost_filesystem boost_regex m hdf5_hl hdf5 hdf5_serial_hl hdf5_serial opencv_core opencv_highgui opencv_imgproc  opencv_imgcodecs 
 
 # handle IO dependencies
 USE_LEVELDB ?= 1
@@ -197,7 +197,7 @@ ifeq ($(USE_OPENCV), 1)
 	LIBRARIES += opencv_core opencv_highgui opencv_imgproc
 
 	ifeq ($(OPENCV_VERSION), 3)
-		LIBRARIES += opencv_highgui
+		LIBRARIES += opencv_imgcodecs opencv_videoio
 	endif
 
 endif
