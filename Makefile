@@ -101,8 +101,6 @@ MAT$(PROJECT)_SO := matlab/+$(PROJECT)/private/$(PROJECT)_.$(MAT_SO_EXT)
 PROTO_GEN_HEADER_SRCS := $(addprefix $(PROTO_BUILD_DIR)/, \
 		$(notdir ${PROTO_SRCS:.proto=.pb.h}))
 PROTO_GEN_HEADER := $(addprefix $(PROTO_BUILD_INCLUDE_DIR)/, \
-
-LIBRARIES += glog gflags protobuf boost_system boost_filesystem boost_regex m hdf5_hl hdf5 hdf5_seri
 		$(notdir ${PROTO_SRCS:.proto=.pb.h}))
 PROTO_GEN_CC := $(addprefix $(BUILD_DIR)/, ${PROTO_SRCS:.proto=.pb.cc})
 PY_PROTO_BUILD_DIR := python/$(PROJECT)/proto
@@ -180,7 +178,7 @@ ifneq ($(CPU_ONLY), 1)
 	LIBRARIES := cudart cublas curand
 endif
 
-LIBRARIES += glog gflags protobuf boost_system boost_filesystem boost_regex m hdf5_hl hdf5 hdf5_serial_hl hdf5_serial opencv_core opencv_highgui opencv_imgproc 
+LIBRARIES += glog gflags protobuf boost_system boost_filesystem boost_regex m hdf5_hl hdf5 hdf5_serial_hl hdf5_serial opencv_core opencv_highgui opencv_imgproc  opencv_imgcodecs
 
 # handle IO dependencies
 USE_LEVELDB ?= 1
