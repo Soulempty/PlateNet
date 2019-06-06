@@ -5,7 +5,7 @@ project(PLateDetect)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
-find_package(OpenCV 3.4.0 REQUIRED)
+find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS})
 include_directories(include) 
 include_directories(../include /usr/local/include /usr/local/cuda/include /usr/include)
