@@ -1,11 +1,11 @@
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.6)
 project(PLateDetect)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.4.0 REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS})
 include_directories(include) 
 include_directories(../include /usr/local/include /usr/local/cuda/include /usr/include)
@@ -21,4 +21,3 @@ LINK_DIRECTORIES(../build/lib)
 add_executable(Detect ${CVTEXT} ${SRC_DETECTION} ${SRC_FASTDESKEW} ${SRC_RECOGNIZER} ${SRC_PIPLINE} Demo/test_pipeline.cpp)
 
 target_link_libraries(Detect ${OpenCV_LIBS} freetype libcaffe.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libglog.so)
-
