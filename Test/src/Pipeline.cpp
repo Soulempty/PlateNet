@@ -82,7 +82,7 @@ int PipelinePR::DetectRecognize(Mat img,bool &flag,string name)
     gettimeofday(&time, NULL);  //END-TIME
     totalTime = (((time.tv_sec * 1000) + (time.tv_usec / 1000)) - totalTime);
     cout << "Processing time:" << totalTime << " ms" <<  endl;
-    string folder = "./result/";
+    string folder = "./testData/result/";
     if (0 != access(folder.c_str(), 0))
         mkdir(folder.c_str(),484);
     imwrite(folder+name,img);
