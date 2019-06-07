@@ -78,7 +78,7 @@ int main(int argc,char** argv){
   {
     VideoCapture capture(f);
     string h=f.substr(f.find_last_of('/')+1,f.size()-f.find_last_of('/')-1);
-    string out_file="./"+h.replace(h.find_last_of('.'),4,".avi");
+    string out_file="./testData"+h.replace(h.find_last_of('.'),4,".avi");
     pipeline.VideoRecognize(capture,out_file,true,scale);//VideoCapture capture,string out_path,bool save=true,float scale=1.0
   }
   return 0;
