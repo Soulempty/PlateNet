@@ -2,7 +2,7 @@
 import numpy as np
 import cv2,os,sys
 
-caffe_root='../PlateNet/python'
+caffe_root='../python'
 sys.path.insert(0, caffe_root)
 import caffe
 
