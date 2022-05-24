@@ -16,6 +16,6 @@ pyyaml>=3.10
 opencv-python
 Pillow>=2.3.0
 six>=1.1.0
-tensorflow-gpu==1.10.0
+tensorflow-gpu==2.6.4
 keras==2.2.4
 
